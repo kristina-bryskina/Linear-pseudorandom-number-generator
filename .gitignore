@@ -3,3 +3,4 @@ linear.o
 random.o
 random_source.h.gch
 printrandom
+.clang-format
