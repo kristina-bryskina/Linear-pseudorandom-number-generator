@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -O2 -std=gnu2x -Wall -Werror -Wno-pointer-sign -Werror=vla -lm
 
-Main: Generator
+all: Generator
 	$(CC) $(CFLAGS) -g -rdynamic main.c Generator.so -o printrandom
 
 Generator: Linear Random
