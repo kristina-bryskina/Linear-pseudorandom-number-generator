@@ -9,12 +9,14 @@ enum
 
 typedef struct RandomSource RandomSource;
 
-typedef struct RandomSourceOperations {
+typedef struct RandomSourceOperations
+{
     RandomSource *(*destroy)(RandomSource *);
     double (*next)(RandomSource *);
 } RandomSourceOperations;
 
-typedef struct RandomSource {
+typedef struct RandomSource
+{
     unsigned long long current;
     int fd;
     RandomSourceOperations *ops;
